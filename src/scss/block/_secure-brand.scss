@@ -1,0 +1,20 @@
+/* secure-brand */
+.secure-brand {
+    display: table;
+    width: 100%;
+    @include sm {
+        width: auto;
+    }
+    &--footer {
+        text-align: center;
+        margin-bottom: 30px;
+        @include sm {
+            margin-bottom: 0;
+        }
+    }
+    &__item {
+        padding: 0 10px;
+        display: table-cell;
+        vertical-align: baseline;
+    }
+}

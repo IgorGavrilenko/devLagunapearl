@@ -1,0 +1,92 @@
+/* footer-menu */
+.footer-menu {
+    @include sm {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    @include lg {
+        @include clearfix()
+    }
+    @include media-sm-lg {
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+    &__wrap {
+        padding: 15px 0;
+        border-bottom: 1px solid $color-9;
+        @include sm {
+            border: none;
+            float: left;
+            margin-right: 0;
+            padding: 0;
+        }
+    }
+    &__title {
+        display: block;
+        position: relative;
+        font-size: 22px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-align: center;
+        @include sm {
+            margin-bottom: 25px;
+            font-size: 16px;
+            text-align: left;
+        }
+        &:before {
+            @extend %icomoon;
+            content: '\e90e';
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 15px;
+            bottom: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            @include sm {
+                display: none;
+            }
+        }
+        &.toggle-active {
+            &:before {
+                content: '\e911';
+            }
+        }
+    }
+    &__list {
+        display: none;
+        padding-top: 15px;
+        @include sm {
+            display: block !important;
+            padding-top: 0;
+        }
+    }
+    &__link {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        padding: 7px 0;
+        @include sm {
+            text-align: left;
+            font-size: 14px;
+            padding: 0;
+        }
+    }
+}

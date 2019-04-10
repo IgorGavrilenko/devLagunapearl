@@ -1,0 +1,156 @@
+// fonts
+$font-family-sans-serif: "Questrial-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI" ,Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+//letter-spacing
+$letterSpacing06: .6px;
+$letterSpacing1: 1px;
+$letterSpacing12: 1.2px;
+$letterSpacing13: 1.3px;
+$letterSpacing14: 1.4px;
+$letterSpacing15: 1.5px;
+$letterSpacing17: 1.7px;
+$letterSpacing2: 2px;
+
+// colors
+$transparent: transparent !default;
+$black: black !default;
+$white: white !default;
+$purple: purple !default;
+$warm-gray: #807d7c !default;
+$gray: #cdcdcd !default;
+$dark-gray: #8b8787 !default;
+$light-gray: #b1afaf !default;
+$highlight: #57aa60 !default;
+$greyish-brown: #484848 !default;
+$butterscotch: #fbb850 !default;
+$brownish: #975f5e !default;
+$starrrColor: #f3d269 !default;
+$white-alfa: rgba(255,255,255,.5) !default;
+$bg-overlay: rgba(235,225,225,.7) !default;
+$panel-shadow: 0 6px 49px 0 rgba(235, 225, 224, 0.55) !default;
+$propos-panel-shadow: 0 0 10px 0 rgba(205, 193, 191, 0.41) !default;
+$big-shadow: 0 10px 65px 0 rgba(205, 193, 191, 0.77) !default;
+$shadow-1: rgba(235, 225, 224, 0.65) !default;
+$shadow-2: rgba(205, 193, 191, 0.77) !default;
+$shadow-3: 1px 5px 24px 0 #eee8df !default;
+$selection: #b3d4fc !default;
+$color-0: #ebe1e1 !default;
+$color-1: #f3f6f6 !default;
+$color-2: #f3f3f3 !default;
+$color-3: #bbbab9 !default;
+$color-4: #ece2e1 !default;
+$color-5: #cbcbcb !default;
+$color-6: #959291 !default;
+$color-7: #e8e8e8 !default;
+$color-8: #cccccc !default;
+$color-9: #939393 !default;
+$color-10: #d8d5d5 !default;
+$color-11: #bca5a1 !default;
+$color-12: #d1c8ab !default;
+$color-13: #e9e9e9 !default;
+$color-14: #e8ccc7 !default;
+$color-15: #e1d8bf !default;
+$color-16: #f9f7f4 !default;
+$color-17: #fbfbfd !default;
+$color-18: #444444 !default;
+$color-19: #f4f4f4 !default;
+$color-20: #f7f9f9 !default;
+$color-21: #f1ebea !default;
+$color-22: #f3f7f7 !default;
+$color-23: #a3a2a1 !default;
+$color-24: #333333 !default;
+$color-25: #d5d4d4 !default;
+$color-26: #ca8d91 !default;
+$color-27: #909090 !default;
+$color-28: #bcbbba !default;
+$color-29: #a6a6a6 !default;
+$color-30: #ffbb9e !default;
+$color-31: #f3f7f9 !default;
+$color-32: #ccced0 !default;
+$color-33: #00b178 !default;
+$color-34: #eaecee !default;
+$color-35: #fcdcce !default;
+$color-36: #d7d7d8 !default;
+$color-37: #918e8d !default;
+
+// Base
+$font-family-base: $font-family-sans-serif !default;
+$font-size-root: 16px !default;
+$line-height-base: 1.42857143 !default;
+$color-base: $black !default;
+$white: $white !default;
+// $em-base: 16px !default;
+
+// Body
+$font-size-body: 100% !default;
+
+// width value
+$thin-max-width: 950px !default;
+$narrow-max-width: 1210px !default;
+$middle-max-width: 1374px !default;
+$wide-max-width: 1510px !default;
+
+// button
+$btn-ff: inherit !default;
+$btn-fz: inherit !default;
+$btn-lh: 1 !default;
+$btn-display: inline-block !default;
+$btn-brad: 0 !default;
+$btn-bdw: 1px !default;
+$btn-bds: solid !default;
+$btn-width: auto !default;
+$btn-height: auto !default;
+$btn-sh: none !default;
+$btn-decor: none !default;
+
+// button hover-active-focus
+$btn-color-act: $white !default;
+$btn-bg-act: $warm-gray !default;
+$btn-bdc-act: $warm-gray !default;
+$btn-sh-act: 0 !default;
+
+// container
+$padding-right: 5% !default;
+$padding-left: 5% !default;
+
+// link
+$link-ff: inherit !default;
+$link-fz: inherit !default;
+$link-lh: inherit !default;
+$link-color: $black !default;
+$link-decor: none !default;
+
+// Link hover-active-focus-visited
+$link-color-act: $black !default;
+$link-color-vis: $purple !default;
+$link-decor-act: underline !default;
+
+// media-queries
+$xs-width: 576px !default;
+$sm-width: 768px !default;
+$md-width: 992px !default;
+$lg-width: 1200px !default;
+$slg-width: 1400px !default;
+$xlg-width: 1600px !default;
+
+// util
+$placeholder-color: $black !default;
+
+// z-index
+$z--1: -1 !default;
+$z-0: 0 !default;
+$z-1000: 1000 !default;
+$z-1020: 1020 !default;
+$z-1030: 1030 !default;
+$z-1040: 1040 !default;
+$z-1050: 1050 !default;
+$z-1060: 1060 !default;
+$z-1070: 1070 !default;
+$z-top-line: 1075 !default;
+$z-search: 1090 !default;
+$z-search-overlay: 1080 !default;
+
+//animDuration
+$animDuration: .25s;

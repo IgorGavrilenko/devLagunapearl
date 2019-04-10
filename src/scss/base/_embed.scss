@@ -1,0 +1,13 @@
+/* embedded */
+
+output,
+iframe,
+svg,
+canvas {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img {
+  @include img-resp()
+}

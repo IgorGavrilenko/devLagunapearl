@@ -1,0 +1,186 @@
+/* form */
+
+input,
+button,
+select,
+optgroup,
+textarea,
+textarea [contenteditable] {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+option,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+input[type='file'] {
+    display: block;
+}
+input[type='range'] {
+    display: block;
+    width: 100%;
+}
+select[multiple],
+select[size] {
+    height: auto;
+}
+input[type='file']:focus,
+input[type='radio']:focus,
+input[type='checkbox']:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+input[type='radio']:disabled,
+input[type='checkbox']:disabled {
+    cursor: not-allowed;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+button:focus,
+button:active,
+textarea:focus,
+textarea:active,
+input:focus,
+input:active {
+    outline: none;
+    outline-width: 0;
+}
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* custom style */
+
+%btn-act {
+    position: relative;
+    text-decoration: none !important;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 0;
+        opacity: 0;
+        @extend %transition;
+    }
+    &:active,
+        &:focus,
+        &:hover {
+        &:after {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+}
+%btn-black {
+    border-color: $black;
+    color: $black;
+    &:after {
+        background-color: $black;
+    }
+    &:active,
+        &:focus,
+        &:hover {
+        color: $white;
+    }
+}
+%btn-white {
+    border-color: $white;
+    color: $white;
+    &:after {
+        background-color: $white;
+    }
+    &:active,
+        &:focus,
+        &:hover {
+        color: $black;
+    }
+}
+%btn-gray {
+    border-color: $color-0;
+    background-color: $color-0;
+    &:after {
+        background-color: $warm-gray;
+    }
+    &:active,
+        &:focus,
+        &:hover {
+        color: $white;
+        border-color: $warm-gray;
+        -webkit-transition: border-color .8s ease-out;
+        transition: border-color .8s ease-out;
+    }
+}
+%btn-tr {
+    border-color: $color-5;
+    background-color: transparent;
+    &:after {
+        background-color: $warm-gray;
+    }
+    &:active,
+        &:focus,
+        &:hover {
+        color: $white;
+        border-color: $warm-gray;
+        -webkit-transition: border-color .8s ease-out;
+        transition: border-color .8s ease-out;
+    }
+}
+.button {
+    @extend %transition;
+    font-size: 18px;
+    @include btn()
+    text-transform: uppercase;
+    @include sm {
+        font-size: 13px;
+    }
+}
+[class*="button--c-"] {
+    @extend %btn-act;
+    &.button--c-b {
+        @extend %btn-black;
+    }
+    &.button--c-w {
+        @extend %btn-white;
+    }
+    &.button--c-g {
+        @extend %btn-gray;
+    }
+    &.button--c-tr {
+        @extend %btn-tr;
+    }
+    .button__text {
+        position: relative;
+        z-index: $z-1000;
+        @include v-dib-m();
+    }
+}

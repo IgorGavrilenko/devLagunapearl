@@ -1,0 +1,37 @@
+/*home-about*/
+.home-about {
+    @include max-sm {
+        margin-right: -6%;
+        margin-left: -6%;
+    }
+    &__title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__logo {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+        background-image: url("../img/logo/main-logo-2.png");
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 62px;
+        height: 60px;
+    }
+    &__text {
+        font-size: 14px;
+        max-width: 780px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 50px;
+        text-align: center;
+        @include max-sm {
+            font-size: 18px;
+            padding: 0 5%;
+        }
+    }
+}

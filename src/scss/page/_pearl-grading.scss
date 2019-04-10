@@ -1,0 +1,552 @@
+/* pearl-grading-page */
+.pearl-grading-page {
+    .main-content {
+        @include max-sm {
+            padding-top: 0;
+        }
+    }
+    .page-header {
+        @include max-sm {
+            display: none;
+        }
+    }
+}
+
+/* fill-panel-sect */
+.fill-panel-sect {
+    &--grading-1 {
+        @include max-sm {
+            margin-bottom: 40px;
+        }
+        .fill-panel__title--mob {
+            font-size: 34px;
+            margin-bottom: 20px;
+            @include sm {
+                display: none;
+            }
+        }
+        .fill-panel {
+            &__wrap {
+                padding: 0;
+                @include sm {
+                    text-align: left;
+                }
+            }
+            &__link {
+                text-decoration: underline;
+                @include h() {
+                    text-decoration: none;
+                }
+            }
+            &__text {
+                &--mob {
+                    @include sm {
+                        display: none;
+                    }
+                }
+                &--desc {
+                    display: none;
+                    @include sm {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .fill-panel-list {
+            @include a() {
+                display: none;
+            }
+            &__item {
+                margin-bottom: 0;
+                @include fc() {
+                    .fill-panel {
+                        &__text {
+                            max-width: 480px;
+                        }
+                    }
+                }
+                @include fc() {
+                    .fill-panel {
+                        &__left {
+                            display: block;
+                            padding: 40px 5% 35%;
+                            margin-bottom: -30%;
+                            background-color: $color-4;
+                            @include md {
+                                display: table-cell;
+                                padding: 85px 17% 85px 60px;
+                                width: 62%;
+                            }
+                        }
+                        &__right {
+                            display: block;
+                            @include md {
+                                display: table-cell;
+                                width: 38%;
+                            }
+                        }
+                        &__text {
+                            max-width: 100%;
+                        }
+                        &__img-wrap {
+                            padding-right: 5%;
+                            padding-left: 5%;
+                            padding-bottom: 40px;
+                            text-align: center;
+                            @include md {
+                                display: block;
+                                padding-right: 0;
+                                padding-left: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                        &__img {
+                            @include md {
+                                position: relative;
+                                left: -35%;
+                                width: 135%;
+                                max-width: none;
+                            }
+                        }
+                    }
+                }
+                @include lc() {
+                    .fill-panel {
+                        &__wrap {
+                            @include max-sm {
+                                display: table;
+                                width: 100%;
+                            }
+                        }
+                        &__left {
+                            padding: 60px 5% 0;
+                            @include max-sm {
+                                display: table-footer-group;
+                            }
+                            @include sm {
+                                width: 78%;
+                                padding: 60px 0 5% 5%;
+                            }
+                            @include md {
+                                padding-left: 60px;
+                            }
+                        }
+                        &__right {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            @include sm {
+                                padding-top: 60px;
+                                padding-bottom: 60px;
+                                padding-right: 5%;
+                                padding-left: 5%;
+                                width: 170px;
+                            }
+                            @include md {
+                                padding-right: 60px;
+                                padding-left: 60px;
+                                width: 170px;
+                            }
+                        }
+                        &__text {
+                            letter-spacing: $letterSpacing14;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--grading-2 {
+        .fill-panel {
+            &__wrap {
+                padding: 50px 5%;
+                text-align: left;
+                @include md {
+                    padding-top: 85px;
+                    padding-bottom: 85px;
+                }
+            }
+            &__left {
+                text-align: center;
+                @include sm {
+                    width: 26%;
+                }
+                @include md {
+                    text-align: left;
+                }
+            }
+            &__right {
+                @include sm {
+                    width: 74%;
+                }
+            }
+            &__title {
+                font-size: 32px;
+                text-transform: none;
+                margin-bottom: 10px;
+            }
+            &__text {
+                max-width: 850px;
+                letter-spacing: $letterSpacing14;
+            }
+            &__img {
+                @include v-dib-m();
+                position: relative;
+                right: 8%;
+                @include sm {
+                    right: 30%;
+                }
+                @include md {
+                    top: 30px;
+                    right: 10%;
+                }
+            }
+        }
+    }
+}
+
+/*trustpl*/
+.trustpl {
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    @include sm {
+        width: 170px;
+    }
+    &__img {
+        display: block;
+        margin-bottom: 3px;
+    }
+    &__text {
+        font-size: 14px;
+        color: $color-24;
+        text-align: left;
+        @include sm {
+            font-size: 12px;
+        }
+    }
+    &__link {
+        font-size: inherit;
+        font-weight: bold;
+        color: $black;
+        @include h() {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*tab*/
+.tab {
+    .container--tab {
+        @include max-sm {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+.tab-toggle-list {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    @include sm {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+.tab-toggle {
+    @include v-dtc-m()
+    line-height: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    background-color: $color-2;
+    cursor: pointer;
+    width: 25%;
+    @include sm {
+        border-top: 1px solid $color-25;
+        border-left: 1px solid $color-25;
+    }
+    @include fc() {
+        border-left-color: transparent;
+    }
+    &__text {
+        position: relative;
+        font-size: 21px;
+        line-height: 1;
+        color: $color-9;
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        white-space: nowrap;
+        @extend %link-uLine;
+        @include b() {
+            bottom: 0;
+            height: 6px;
+            background-color: $color-4;
+            @include sm {
+                display: none;
+            }
+        }
+        @include sm {
+            color: $black;
+            @include text-truncate()
+        }
+    }
+    &--active {
+        @extend %transition;
+        @include sm {
+            background-color: $white;
+        }
+        .tab-toggle__text {
+            color: $black;
+            @include b() {
+                width: 100%;
+                opacity: 1;
+            }
+
+        }
+    }
+}
+.tab-target {
+    padding: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    &.fadeIn {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        height: auto;
+        opacity: 1;
+    }
+}
+.tab-caption {
+    margin-bottom: 30px;
+    @include max-sm {
+        display: table;
+        width: 100%;
+    }
+    &__left {
+        @include max-sm {
+            display: table-footer-group;
+            text-align: center;
+        }
+        @include sm {
+            @include v-dtc-t();
+            padding-right: 10px;
+            width: 78%;
+        }
+    }
+    &__right {
+        text-align: center;
+        @include sm {
+            @include v-dtc-m();
+            width: 32%;
+        }
+    }
+    &__title {
+        font-size: 34px;
+        margin-bottom: 15px;
+        @include sm {
+            font-size: 32px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        padding-right: 15px;
+        padding-left: 15px;
+        @include sm {
+            font-size: 14px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        & > span {
+            letter-spacing: $letterSpacing14;
+                display: block;
+                margin-bottom: 10px;
+            @include lc() {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__link {
+        font-size: 18px;
+        color: $warm-gray;
+        display: inline-block;
+        @include sm {
+            font-size: 14px;
+        }
+    }
+    &__spoiler {
+        display: none;
+    }
+}
+.tab-table-wrap {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.tablesaw-bar {
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
+    @include sm {
+        display: none;
+    }
+    .tablesaw-advance {
+        float: none;
+    }
+    a.tablesaw-btn {
+        font-size: 0 !important;
+        text-indent: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-color: $color-9;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        @include b() {
+            display: none;
+        }
+        @include a() {
+            @extend %icomoon;
+            line-height: 60px !important;
+            font-size: 18px !important;
+            color: $color-9;
+        }
+    }
+    .left {
+        @include a() {
+            content: '\e90f' !important;
+        }
+    }
+    .right {
+        @include a() {
+            content: '\e910' !important;
+        }
+    }
+}
+.tab-table {
+    th,
+    td {
+        border-width: 1px !important;
+        border-style: solid;
+        border-color: $color-8 !important;
+    }
+    th {
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+        padding: 20px 15px 15px;
+        text-align: center !important;
+        width: 17.2%;
+        @include max-sm {
+            width: 120px !important;
+            background-color: $color-2;
+        }
+        @include sm {
+            border-top: none;
+        }
+    }
+    td {
+        font-size: 14px;
+        letter-spacing: $letterSpacing14;
+        position: relative;
+        padding: 15px;
+        vertical-align: top;
+        background-color: $white;
+        @extend %transition;
+        cursor: pointer;
+    }
+    tr {
+        th,
+        td {
+            @include fc() {
+                border-left: none;
+                background-color: $color-2;
+                @include sm {
+                    background-color: $transparent;
+                }
+            }
+            @include lc() {
+                border-right: none;
+            }
+            @include sm {
+                border-bottom-color: $transparent !important;
+            }
+        }
+        @include h() {
+            td {
+                background-color: $color-2;
+            }
+        }
+        th {
+            @include fc() {
+                width: 14%;
+            }
+        }
+        td {
+            @include fc() {
+                font-size: 20px;
+            }
+        }
+        @include fc() {
+            td {
+                padding-top: 40px;
+                @include b() {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 60%;
+                    height: 1px;
+                    background-color: $color-8;
+                    @extend %transition;
+                    @include sm {
+                        content: '';
+                    }
+                }
+                @include fc() {
+                    @include b() {
+                        background-color: transparent;
+                    }
+                }
+            }
+            @include h() {
+                td {
+                    @include b() {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    &__highlight {
+        font-size: 13px;
+        font-weight: 600;
+        display: block;
+    }
+    &__v-center {
+        td {
+            vertical-align: middle;
+        }
+    }
+}

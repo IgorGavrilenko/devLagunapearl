@@ -1,0 +1,28 @@
+/* breadcrumb */
+.breadcrumb {
+    margin-bottom: 25px;
+    display: none;
+    &__list {
+        @include text-truncate()
+    }
+    &__item {
+        @include v-dib-m();
+    }
+    @include sm {
+        display: block;
+    }
+    &__link {
+        font-size: 13px;
+        color: $warm-gray;
+        &--current {
+            color: $black;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+    &__arrow {
+        color: $warm-gray;
+        display: inline-block;
+        padding: 0 3px;
+    }
+}

@@ -1,0 +1,22 @@
+/* phone */
+.phone {
+    &__icon {
+        @include v-dib-m()
+        margin-right: 5px;
+    }
+    &__num {
+        @include v-dib-m()
+    }
+    &--header {
+        display: none;
+        @include sm {
+            display: block;
+        }
+    }
+    &--footer {
+        display: none;
+        @include md {
+            display: inline-block;
+        }
+    }
+}

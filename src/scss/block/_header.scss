@@ -1,0 +1,182 @@
+/* header */
+.header {
+    position: relative;
+    z-index: $z-1070;
+    padding-bottom: 6%;
+    background: $white;
+    @extend %transition;
+    @include sm {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+    &__inner {
+        @extend %flex-space-between;
+        @include sm {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+    }
+}
+
+/*top-line*/
+.top-line {
+    position: relative;
+    z-index: $z-top-line;
+    padding: 10px 0;
+    background-color: $color-0;
+    &__inner {
+        @extend %flex-space-between;
+    }
+    &__tool-bar {
+        @include sm {
+            display: none;
+            -webkit-order: 4;
+            -ms-flex-order: 4;
+            order: 4;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+        }
+    }
+    &__tagline {
+        @include text-truncate();
+        @include sm {
+            -webkit-order: 2;
+            -ms-flex-order: 2;
+            order: 2;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+        }
+    }
+    &__phone {
+        display: none;
+        @include sm {
+            display: block;
+            -webkit-order: 4;
+            -ms-flex-order: 4;
+            order: 4;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+        }
+    }
+    &__lang-bar {
+        visibility: hidden;
+        @include sm {
+            visibility: visible;
+            -webkit-order: 1;
+            -ms-flex-order: 1;
+            order: 1;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+        }
+    }
+}
+
+/* tagline */
+.tagline {
+    display: inline-block;
+    &__text {
+        &--desk {
+            display: none;
+            @include sm {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* logo */
+.logo {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 175px;
+    @include sm {
+        margin: 0;
+        width: auto;
+    }
+    &__link {
+        display: inline-block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__text {
+        position: absolute;
+        bottom: -10px;
+        @include sm {
+            position: static;
+            @include v-dib-m()
+            width: 270px;
+        }
+        @include md {
+            width: 306px;
+        }
+    }
+    &__img {
+        width: 47px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+}
+
+  /* IE10+ specific styles */
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+     .logo__text {
+         bottom: -30px;
+     }
+}
+
+/* header */
+
+.header {
+    &.is_stuck {
+        .header__inner {
+            @extend %flex-space-between;
+        }
+        @include sm {
+            .logo__img {
+                @include v-dib-m()
+                margin-bottom: 0;
+            }
+            .logo__text {
+                margin-left: 10px;
+            }
+        }
+    }
+}

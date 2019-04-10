@@ -1,0 +1,125 @@
+/* footer */
+.footer {
+    padding-bottom: 35px;
+    @include sm {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+    &__top {
+        margin-bottom: 40px;
+        padding: 40px 0;
+        @include sm {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        background-color: $color-2;
+        @include lg {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    &__left {
+        margin-bottom: 40px;
+        @include lg {
+            margin-bottom: 0;
+            float: left;
+            width: 79%;
+            padding-top: 8px;
+        }
+    }
+    &__right {
+        @include lg {
+            float: right;
+        }
+    }
+    .net-bar {
+        margin-bottom: 40px;
+        @include lg {
+            margin-bottom: 80px;
+        }
+    }
+}
+.footer-top {
+    &__inner {
+        @include sm {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+}
+.footer-form {
+    font-size: 18px;
+    margin-right: auto;
+    margin-left: auto;
+    @include sm {
+        width: 300px;
+        font-size: 13px;
+    }
+    @include md {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .footer-form__input {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: $black;
+        border-left-color: transparent;
+        border-width: 1px;
+        background-color: transparent;
+        @include placeholder-color() {
+            color: $black;
+        }
+        @include placeholder-focus() {
+            color: $transparent !important;
+        }
+    }
+    .footer-form__label {
+        display: inline-block;
+        width: 100%;
+        @include sm {
+            width: 265px;
+        }
+    }
+    .footer-form__button {
+        overflow: hidden;
+        width: 35px;
+        /*height: 35px;*/
+        font-size: 20px;
+        @include a() {
+            top: -5px;
+            bottom: -5px;
+        }
+    }
+    .footer-form__group {
+        display: table;
+        width: 100%;
+        @include sm {
+            display: table;
+            width: auto;
+        }
+    }
+    .footer-form__label,
+    .footer-form__button {
+        @include v-dtc-t()
+    }
+}

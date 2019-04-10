@@ -1,0 +1,21 @@
+// animation-delay
+$v-anim-delay-1: .4s !default;
+$v-anim-delay-2: .8s !default;
+$v-anim-delay-3: 1.2s !default;
+$v-anim-delay-4: 1.6s !default;
+@mixin m-anim-delay-1 () {
+    -webkit-animation-delay: $v-anim-delay-1;
+    animation-delay: $v-anim-delay-1;
+}
+@mixin m-anim-delay-2 () {
+    -webkit-animation-delay: $v-anim-delay-2;
+    animation-delay: $v-anim-delay-2;
+}
+@mixin m-anim-delay-3 () {
+    -webkit-animation-delay: $v-anim-delay-3;
+    animation-delay: $v-anim-delay-3;
+}
+@mixin m-anim-delay-4 () {
+    -webkit-animation-delay: $v-anim-delay-4;
+    animation-delay: $v-anim-delay-4;
+}

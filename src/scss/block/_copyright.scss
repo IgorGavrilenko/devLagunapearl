@@ -1,0 +1,12 @@
+/* copyright */
+.copyright {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    @include sm {
+        font-size: 11px;
+    }
+    @include lg {
+        text-align: left;
+    }
+}

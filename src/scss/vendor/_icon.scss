@@ -1,0 +1,223 @@
+/* icon */
+%icomoon {
+    position: relative;
+    font-family: 'icomoon' !important;
+    line-height: 1;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    position: relative;
+    display: inline-block;
+    text-decoration: inherit;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+%icon-color-warm-grey {
+    color: $warm-gray;
+}
+[class^="icon-"], [class*=" icon-"] {
+    @extend %icomoon;
+}
+[class^="icon-"], [class*=" icon-"] {
+    &:before {
+        @extend %transition;
+    }
+}
+.icon-chat:before,
+.icon-m-chat:before {
+    content: "\e900";
+}
+.icon-email:before,
+.icon-m-email:before {
+    content: "\e901";
+}
+.icon-bag:before {
+    content: "\e902";
+}
+.icon-account:before {
+    content: "\e903";
+}
+.icon-phone:before {
+    content: "\e906";
+}
+.icon-search:before {
+    content: "\e907";
+}
+.icon-m-cart:before {
+    content: "\e908";
+}
+.icon-m-info:before {
+    content: "\e909";
+}
+.icon-m-menu:before {
+    content: "\e90a";
+}
+.icon-m-phone:before {
+    content: "\e90b";
+}
+.icon-m-search:before {
+    content: "\e90c";
+}
+.icon-accept:before {
+    content: "\e90d";
+}
+.icon-arrow-down:before {
+    content: "\e90e";
+}
+.icon-arrow-left:before {
+    content: "\e90f";
+}
+.icon-arrow-right:before {
+    content: "\e910";
+}
+.icon-arrow-up:before {
+    content: "\e911";
+}
+.icon-close:before {
+    content: "\e912";
+}
+.icon-facebook:before {
+    content: "\e913";
+}
+.icon-google:before {
+    content: "\e914";
+}
+.icon-instagram:before {
+    content: "\e915";
+}
+.icon-pinterest:before {
+    content: "\e916";
+}
+.icon-twitter:before {
+    content: "\e917";
+}
+.icon-p-certificate:before {
+    content: "\e918";
+}
+.icon-p-gift:before {
+    content: "\e919";
+}
+.icon-p-returns:before {
+    content: "\e91a";
+}
+.icon-p-shipping:before {
+    content: "\e91b";
+}
+.icon-filters:before {
+    content: "\e91c";
+}
+.icon-lock:before {
+    content: "\e91d";
+}
+.icon-trash:before {
+    content: "\e91e";
+}
+.icon-star-empty:before {
+    content: "\e9d7";
+}
+.icon-star-full:before {
+    content: "\e9d9";
+}
+[class*="icon-m"] {
+    @include sm {
+        display: none;
+    }
+}
+.icon-d {
+    @include max-sm {
+        display: none;
+    }
+}
+.icon-p-certificate,
+.icon-p-gift,
+.icon-p-returns,
+.icon-p-shipping,
+.icon-m-search,
+.icon-m-phone,
+.icon-m-menu,
+.icon-m-info,
+.icon-m-email,
+.icon-m-chat,
+.icon-m-cart {
+    @include b() {
+        color: $warm-gray;
+    }
+}
+.icon-mark {
+    background-image: url('../img/contact/icon-mark.png');
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 27px;
+}
+[class*="icon-fp"] {
+    height: 48px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon-fp-1 {
+    background-image: url('../img/fill-card/icon-fp-1.png');
+    width: 48px;
+}
+.icon-fp-2 {
+    background-image: url('../img/fill-card/icon-fp-2.png');
+    width: 49px;
+}
+.icon-fp-3 {
+    background-image: url('../img/fill-card/icon-fp-3.png');
+    width: 43px;
+}
+.icon-fp-4 {
+    background-image: url('../img/fill-card/icon-fp-4.png');
+    width: 51px;
+}
+.icon-fp-5 {
+    background-image: url('../img/fill-card/icon-fp-5.png');
+    width: 47px;
+}
+[class*="icon-fc"] {
+    overflow: hidden;
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.icon-fc-1 {
+    background-image: url('../img/fill-card/icon-fc-1.png');
+    background-size: 58px 75px;
+}
+.icon-fc-2 {
+    background-image: url('../img/fill-card/icon-fc-2.png');
+    background-size: 67px 75px;
+}
+.icon-fc-3 {
+    background-image: url('../img/fill-card/icon-fc-3.png');
+    background-size: 73px 56px;
+    background-position: center left 5px;
+}
+.icon-fc-4 {
+    background-image: url('../img/fill-card/icon-fc-4.png');
+    background-size: 73px 55px;
+}
+.icon-dislike,
+.icon-like {
+    width: 21px;
+    height: 19px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon-dislike {
+    background-image: url('../img/testimony/icon-dislike.png');
+}
+.icon-like {
+    background-image: url('../img/testimony/icon-like.png');
+}

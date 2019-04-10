@@ -1,0 +1,94 @@
+/* home-page */
+.home-page {
+    .content {
+        padding-top: 0 !important;
+    }
+}
+.main-carousel {
+    overflow: hidden;
+    @include md {
+        max-height: 654px;
+    }
+    &__img {
+        position: relative;
+        height: 0;
+        padding-bottom: 81%;
+        @include sm {
+            padding-bottom: 42.92%;
+        }
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &--0 {
+            background-image: url('../img/features/mob/pic-0.jpg');
+            @include sm {
+                background-image: url('../img/features/pic-0.jpg');
+            }
+        }
+        &--1 {
+            background-image: url('../img/features/mob/pic-0-1.jpg');
+            @include sm {
+                background-image: url('../img/features/pic-0-1.jpg');
+            }
+        }
+    }
+}
+
+/*banner--home*/
+.banner--home {
+    .banner-descrp {
+        &__wrap {
+            max-width: 300px;
+        }
+        &__text {
+            font-size: 18px;
+            letter-spacing: normal;
+            @include sm {
+                font-size: 16px;
+            }
+        }
+    }
+    .banner__inner--b-left {
+        top: auto;
+        right: auto;
+        left: 7%;
+        bottom: 4.4%;
+    }
+    .banner__inner--left {
+        right: auto;
+        left: 40px;
+    }
+    .banner__inner--small {
+        @include max-xs {
+            padding: 40px;
+        }
+        @include xs {
+            position: relative;
+            height: 0;
+            padding-bottom: 73.3%;
+        }
+    }
+    &.banner--small {
+        @include max-xs {
+            padding: 7%;
+        }
+        @include xs {
+            position: relative;
+            height: 0;
+            padding-bottom: 73.3%;
+        }
+        .banner__inner--b-left {
+            bottom: 9%;
+        }
+        .banner-descrp__wrap {
+            @include media-sm-md {
+                max-width: 200px;
+            }
+        }
+        &.banner--c-1,
+        &.banner--c-0 {
+            background-color: $white;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+/* pagination */
+.pagination {
+    text-align: center;
+    &__icon {
+        @include b() {
+            font-weight: bold;
+            color: $color-26;
+        }
+    }
+    &__btn {
+        @extend %transition;
+        width: 45px;
+        height: 45px;
+        border: 1px solid $color-26;
+        background-color: $transparent;
+        border-radius: 50%;
+        @include h() {
+            border-color: $black;
+            .pagination__icon {
+                @include b() {
+                    color: $black;
+                }
+            }
+        }
+    }
+    &__list {
+        margin: 0 10px;
+        @include sm {
+            margin-right: 35px;
+            margin-left: 35px;
+        }
+    }
+    &__icon,
+    &__btn,
+    &__link,
+    &__item,
+    &__list {
+        @include v-dib-m();
+    }
+    &__item {
+        &--active {
+            color: $color-26;
+        }
+        padding: 0 3px;
+    }
+    &__link {
+        font-size: 24px;
+        color: inherit;
+        @include sm {
+            font-size: 16px;
+        }
+    }
+}

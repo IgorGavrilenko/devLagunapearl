@@ -1,0 +1,256 @@
+/* pearl-lengths-page */
+.pearl-lengths-page {
+    .page-header {
+        &__text {
+            display: block;
+        }
+    }
+}
+
+/*lengths-carousel*/
+.lengths-carousel {
+    padding: 40px 0;
+    border-top: 1px solid $warm-gray;
+    border-bottom: 1px solid $warm-gray;
+    &__right,
+    &__left {
+        @include sm {
+            width: 50%;
+            @include v-dtc-m();
+        }
+    }
+    &__left {
+        margin-bottom: 40px;
+        @include sm {
+            margin-bottom: 0;
+        }
+    }
+    &__right {
+        @include sm {
+            padding-left: 7%;
+        }
+    }
+    &__caption {
+        text-align: center;
+        @include sm {
+            text-align: left;
+        }
+    }
+    &__title {
+        font-size: 34px;
+        letter-spacing: $letterSpacing14;
+        @include sm {
+            letter-spacing: $letterSpacing1;
+            font-size: 24px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        letter-spacing: $letterSpacing14;
+        @include sm {
+            font-size: 14px;
+        }
+    }
+    &__img {
+        width: 100%;
+    }
+    .slick-dots {
+        position: absolute;
+        top: 210px;
+        right: -50px;
+        margin: auto;
+        height: auto;
+        @extend %flex-space-between;
+        -moz-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        -webkit-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        -o-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        -ms-transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        transform: scale(1) rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        @include xs {
+            top: 300px;
+        }
+        @include sm {
+            top: 45%;
+            right: auto;
+            left: 30%;
+        }
+        @include md {
+            left: 32%;
+        }
+        @include lg {
+            left: 35%;
+        }
+        @include xlg {
+            left: 37%;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0 !important;
+            -moz-transform: scale(1) rotate(-90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+            -webkit-transform: scale(1) rotate(-90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+            -o-transform: scale(1) rotate(-90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+            -ms-transform: scale(1) rotate(-90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+            transform: scale(1) rotate(-90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        }
+        &__link {
+            font-size: 18px;
+            line-height: 1;
+            color: $color-23;
+            position: relative;
+            display: block;
+            @include md {
+                font-size: 20px;
+            }
+        }
+        .slick-active {
+            .slick-dots__link {
+                color: $black;
+            }
+        }
+    }
+    .lengths-carousel-slider {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 40px;
+        @include sm {
+            bottom: 50px;
+        }
+        @include sm {
+            bottom: 74px;
+        }
+        @include a() {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -8%;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 116%;
+            height: 3px;
+            background: $color-36;
+            z-index: -1;
+            border-radius: 2px;
+        }
+        &__input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            padding: 0 10px 0 8px;
+            background: $color-36;
+        }
+        &__input[type=range]:focus {
+            outline: none;
+        }
+        &__input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            background: $color-36;
+        }
+        &__input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 1px solid $color-34;
+            height: 21px;
+            width: 21px;
+            border-radius: 50%;
+            background: $color-35;
+            margin-top: -9.5px;
+            cursor: pointer;
+        }
+        &__input[type=range]:focus::-webkit-slider-runnable-track {
+            background: $color-36;
+        }
+        &__input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            background: $color-36;
+        }
+        &__input[type=range]::-moz-range-thumb {
+            border: 1px solid $color-34;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: $color-35;
+            cursor: pointer;
+        }
+        &__input[type=range]::-ms-track {
+            width: 100%;
+            height: 20px;
+            cursor: pointer;
+            background: $color-36;
+            opacity: 0;
+            margin-bottom: -12px;
+        }
+        &__input[type=range]::-ms-thumb {
+            border: 1px solid $color-34;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: $color-35;
+            cursor: pointer;
+        }
+    }
+    @-moz-document url-prefix() {
+        .lengths-carousel-slider__input[type=range] {
+            background-color: transparent;
+        }
+    } 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .lengths-carousel-slider {
+            display: none;
+        }
+    }
+    &--popup {
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+        .lengths-carousel {
+            &__caption {
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                max-width: 260px;
+                @include md {
+                    max-width: 280px;
+                }
+            }
+        }
+        .slick-dots {
+            left: auto;
+            top: 120px;
+            right: -55px;
+            @include media-min (400) {
+                top: 160px;
+            }
+            @include xs {
+                top: 200px;
+            }
+            @include sm {
+                right: 220px;
+            }
+            @include md {
+                right: 290px;
+            }
+            @include lg {
+                left: 35%;
+            }
+            @include xlg {
+                left: 30%;
+            }
+        }
+        .lengths-carousel-slider {
+            @include sm {
+                bottom: 50px;
+            }
+            @include md {
+                bottom: 60px;
+            }
+        }
+    }
+}

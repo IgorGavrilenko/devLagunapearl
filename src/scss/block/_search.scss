@@ -1,0 +1,89 @@
+/* search */
+.popup {
+    &--search {
+        .cell_popup {
+            vertical-align: top !important;
+        }
+        .box_popup {
+            max-width: 100% !important;
+            width: 100%;
+            padding: 0;
+        }
+        .popup_content {
+            padding: 10px 0 80px;
+            background-color: $color-0;
+        }
+        .search {
+            text-align: center;
+            &__button {
+                position: static;
+                font-weight: bold;
+                color: $warm-gray;
+                background-color: transparent;
+                border: 1px solid transparent;
+            }
+            &__result {
+                font-size: 28px;
+                color: $warm-gray;
+                margin: 0;
+                padding-top: 40px;
+            }
+        }
+    }
+    .form-search {
+        margin: 0 auto;
+        padding-top: 30px;
+        @include sm {
+            max-width: 600px;
+        }
+        &__input {
+            font-size: 28px;
+            color: $warm-gray;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-width: 1px;
+            border-style: solid;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: $warm-gray;
+            background-color: transparent;
+        }
+        &__button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            color: $warm-gray;
+            border: 1px solid transparent;
+            background-color: transparent;
+            font-size: 24px;
+        }
+        .form-group {
+            position: relative;
+        }
+    }
+    .form-search__input:-webkit-input-placeholder {
+        color: $warm-gray !important
+    }
+    .form-search__input::-moz-placeholder {
+        color: $warm-gray !important
+    }
+    .form-search__input:-moz-placeholder {
+        color: $warm-gray !important
+    }
+    .form-search__input:-ms-input-placeholder {
+        color: $warm-gray !important
+    }
+    .form-search__input:focus::-webkit-input-placeholder {
+        color: transparent!important
+    }
+    .form-search__input:focus::-moz-placeholder {
+        color: transparent!important
+    }
+    .form-search__input:focus:-moz-placeholder {
+        color: transparent!important
+    }
+}

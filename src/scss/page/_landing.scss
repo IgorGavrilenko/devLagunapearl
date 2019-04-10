@@ -1,0 +1,59 @@
+/* landing */
+.landing-page {
+    .page-header {
+        &__text {
+            display: block !important;
+        }
+    }
+}
+.carousel-landing-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1904px;
+}
+.carousel-landing {
+    width: 100%;
+    margin-bottom: 50px;
+    &__inner {
+        position: relative;
+    }
+    &__item {
+        padding-right: 8px;
+        padding-left: 8px;
+        @include max-xs {
+            margin-top: 5%;
+        }
+        @include fc() {
+            @include max-xs {
+                margin-top: 0;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        @include max-xs {
+            width: 100%;
+        }
+    }
+    &__desrpt {
+        position: absolute;
+        bottom: 6.5%;
+        left: 9.5%;
+    }
+    &__title {
+        @extend %transition;
+        font-size: 30px;
+    }
+    &__button {
+        padding: 12px 45px;
+        @extend %transition;
+    }
+    .slick-prev {
+        left: 15px;
+    }
+    .slick-next {
+        right: 15px;
+    }
+}

@@ -1,0 +1,26 @@
+/* pearl-shapes-page */
+.pearl-shapes-page {
+    .page-header {
+        &__text {
+            padding-bottom: 40px;
+            border-bottom: 1px solid $color-3;
+        }
+    }
+    .fill-card-sect--info {
+        .fill-card-list {
+            padding-bottom: 40px;
+            position: relative;
+            @include a() {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 8px;
+                right: 8px;
+                bottom: 0;
+                margin: auto;
+                height: 1px;
+                background-color: $color-3;
+            }
+        }
+    }
+}

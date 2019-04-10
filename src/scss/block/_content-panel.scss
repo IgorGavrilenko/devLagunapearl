@@ -1,0 +1,111 @@
+/* content-panel */
+.content-panel {
+    padding: 32px;
+    background-color: $color-4;
+    &__list {
+        max-width: 760px;
+        margin-right: auto;
+        margin-left: auto;
+        @include sm {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+    &__item {
+        margin-top: 20px;
+        &:first-child {
+            margin-top: 0;
+        }
+        text-align: center;
+        @include sm {
+            margin-top: 0;
+        }
+        & * {
+            @include sm {
+                @include v-dib-m()
+            }
+        }
+    }
+    &__top {
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        display: block;
+        @include sm {
+            height: 60px;
+        }
+    }
+    &__inner {
+        display: inline-block;
+        width: 230px;
+        @include sm {
+            text-align: left;
+            width: auto;
+        }
+    }
+    &__text {
+        font-size: 22px;
+        line-height: 1;
+        white-space: nowrap;
+        @include v-dib-tb()
+        @include sm {
+            font-size: 15px;
+            display: block;
+        }
+    }
+    .link-info {
+        font-size: 20px;
+        display: none;
+    }
+    &__icon {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        @include sm {
+            height: 60px;
+        }
+        @include b() {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 60px;
+            height: 61px;
+            @include sm {
+                font-size: 40px;
+                height: 41px;
+            }
+        }
+    }
+    .icon-p-shipping {
+        @include b() {
+            font-size: 80px;
+            height: 80px;
+            @include sm {
+                font-size: 60px;
+                height: 60px;
+            }
+        }
+    }
+}

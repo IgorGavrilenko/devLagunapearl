@@ -1,0 +1,401 @@
+/* testimony-page */
+.testimony-page {
+    /*lead-sect*/
+    .lead-sect {
+        margin-bottom: 0;
+        @include xs {
+            margin-bottom: 50px;
+        }
+        &__top,
+        &__middle,
+        &__bottom {
+            max-width: 100%;
+        }
+        &__middle {
+            margin-bottom: 30px;
+        }
+        &__img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            &.secure-logo-9 {
+                margin-bottom: 40px;
+                width: 109px;
+                @include xs {
+                    @include v-dib-m();
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* trustpl */
+.trustpl-logo {
+    @include max-xs {
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-top: 30px;
+        background-color: $color-31;
+    }
+    @include xs {
+        text-align: center;
+        margin-left: 25px;
+        @include v-dib-m();
+        background-color: $white;
+    }
+    img {
+        margin-top: 5px;
+        @include fc() {
+            margin-top: 0;
+        }
+    }
+    &__text {
+        display: inline-block;
+        padding: 20px 0;
+        border-bottom: 1px solid $color-34;
+        @include xs {
+            padding: 10px 0 0 0;
+            border: none;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+    &__divider {
+        display: inline-block;
+        padding: 0 4px 0 7px;
+    }
+    .secure-logo-7 {
+        width: 179px;
+    }
+    .secure-logo-8 {
+        width: 115px;
+    }
+}
+.trustpl {
+    &--testimony {
+        margin-left: 0 !important;
+        text-align: center;
+        .trustpl {
+            &__title {
+                font-size: 26px;
+                font-weight: bold;
+            }
+            &__text {
+                font-size: 14px;
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+            &__link {
+                text-decoration: underline;
+            }
+        }
+        .secure-logo-7 {
+            width: 110px;
+        }
+    }
+}
+
+/*testimony-carousel*/
+.testimony-carousel-sect {
+    padding: 40px 0;
+    background-color: $color-31;
+    @include xs {
+        background-color: $color-2;
+    }
+    @include clearfix();
+    &__left,
+    &__right {
+        @include lg {
+            float: left;
+        }
+    }
+    &__left {
+        display: none;
+        @include lg {
+            display: block;
+            width: 20%;
+        }
+    }
+    &__right {
+        @include lg {
+            width: 80%;
+        }
+    }
+}
+.testimony-carousel {
+    padding-bottom: 70px;
+    @include xs {
+        padding-bottom: 0;
+    }
+    &__item {
+        padding: 0 30px;
+        @include xs {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    &__top {
+        @include clearfix();
+        margin-bottom: 15px;
+        display: none;
+        @include xs {
+            display: block;
+        }
+    }
+    &__img {
+        float: left;
+        width: 115px;
+    }
+    &__date {
+        font-size: 14px;
+        color: $color-27;
+        float: right;
+        padding-top: 3px;
+        &--mob {
+            color: $color-27;
+            display: block;
+            @include xs {
+                display: none;
+            }
+
+        }
+    }
+    &__middle {
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0;
+        @include text-truncate();
+    }
+    &__text {
+        font-size: 18px;
+        max-height: 100px;
+        @include sm {
+            font-size: 14px;
+        max-height: 40px;
+        }
+    }
+    &__customer {
+        @include sm {
+            font-size: 14px;
+        }
+        color: $color-27;
+    }
+    .slick-arrow {
+        width: 45px;
+        height: 45px;
+        border: 1px solid $warm-gray;
+        border-radius: 50%;
+        @include max-xs {
+            top: auto;
+        }
+        @include b() {
+            font-size: 22px;
+        }
+        @include h() {
+            border-color: $black;
+        }
+    }
+    .slick-prev {
+        left: 30px;
+        @include xs {
+            left: -25px;
+        }
+        @include lg {
+            left: -40px;
+        }
+    }
+    .slick-next {
+        right: 30px;
+        @include xs {
+            right: -25px;
+        }
+        @include lg {
+            right: -40px;
+        }
+    }
+    .slick-disabled {
+        border-color: $color-25;
+        @include h() {
+            border-color: $color-25;
+        }
+        @include b() {
+            color: $color-25;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        button {
+            width: 16px;
+            height: 16px;
+            border: none;
+            background-color: $color-32;
+        }
+    }
+    .slick-active {
+        button {
+            background-color: $color-33;
+        }
+    }
+}
+
+/*review-list-sect*/
+.review-list-sect {
+}
+.review-list {
+    margin-bottom: 80px;
+    @include sm {
+        margin-bottom: 0;
+    }
+    &__item {
+        padding: 45px 0;
+        border-top: 1px solid $color-28;
+        @include sm {
+            border-width: 2px;
+        }
+        @include fc() {
+            border-top-color: $transparent;
+        }
+        @include lc() {
+            padding-bottom: 0;
+        }
+    }
+    &__center,
+    &__right {
+        @include max-sm {
+            text-align: center;
+        }
+        @include sm {
+            @include v-dtc-t();
+        }
+    }
+    &__center {
+        max-width: 780px;
+        @include sm {
+            padding-left: 50px;
+            padding-right: 20px;
+        }
+    }
+    &__left {
+        @include max-sm {
+            text-align: center;
+        }
+        @include sm {
+            @include v-dtc-m();
+        }
+    }
+    &__img {
+        max-width: 150px;
+    }
+    &__customer {
+        color: $color-26;
+        display: block;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 30px;
+        @include sm {
+            font-size: 24px;
+        }
+        letter-spacing: $letterSpacing1;
+    }
+    &__text {
+        font-size: 18px;
+        @include sm {
+            font-size: 14px;
+        }
+        letter-spacing: $letterSpacing14;
+        height: 80px;
+        @include lc() {
+            margin-bottom: 0;
+        }
+    }
+    &__date {
+        font-size: 18px;
+        color: $color-9;
+        display: block;
+        margin-bottom: 15px;
+        padding-top: 4px;
+        padding-right: 1px;
+        @include sm {
+            font-size: 12px;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+    }
+    &__rating {
+        margin-bottom: 20px;
+        @include sm {
+            margin-bottom: 64px;
+            text-align: right;
+        }
+    }
+    &--mob {
+        @include sm {
+            display: none;
+        }
+        .review-list__customer {
+            font-size: 24px;
+        }
+        .review-list__customer {
+            font-size: 24px;
+        }
+    }
+    &--desc {
+        display: none;
+        @include sm {
+            display: block;
+        }
+    }
+}
+.rating-val {
+    display: table;
+    width: 100%;
+    &__label {
+        font-size: 18px;
+        color: $color-9;
+        white-space: nowrap;
+        display: block;
+        margin: 20px 0 10px;
+        @include sm {
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+    &__inner {
+        padding-left: 23px;
+    }
+    &__label,
+    &__wrap,
+    &__inner {
+        white-space: nowrap;
+    }
+    &__label,
+    &__wrap {
+        @include sm {
+            @include v-dib-m();
+        }
+    }
+    &__inner {
+        @include v-dib-m();
+    }
+    &__icon {
+        vertical-align: middle;
+    }
+    &__sum {
+        font-size: 21px;
+        @include v-dib-m();
+        margin-left: 3px;
+        @include sm {
+            font-size: 16px;
+        }
+    }
+}

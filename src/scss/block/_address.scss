@@ -1,0 +1,28 @@
+/* address */
+.address {
+    font-size: 14px;
+    margin-bottom: 10px;
+    @include sm {
+        margin-bottom: 50px;
+    }
+    &--footer {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+        @include sm {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        @include lg {
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        br {
+            display: none;
+            @include sm {
+                text-align: left;
+                display: inline;
+            }
+        }
+    }
+}

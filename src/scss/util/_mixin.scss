@@ -1,0 +1,335 @@
+// alignement
+@mixin v-dtc-m() {
+    display: table-cell;
+    vertical-align: middle;
+}
+@mixin v-dtc-t() {
+    display: table-cell;
+    vertical-align: top;
+}
+@mixin v-dtc-b() {
+    display: table-cell;
+    vertical-align: bottom;
+}
+@mixin v-dib-m() {
+    display: inline-block;
+    vertical-align: middle;
+}
+@mixin v-dib-t() {
+    display: inline-block;
+    vertical-align: top;
+}
+@mixin v-dib-tb() {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+@mixin v-dib-tt() {
+    display: inline-block;
+    vertical-align: text-top;
+}
+@mixin v-dib-bl() {
+    display: inline-block;
+    vertical-align: baseline;
+}
+@mixin v-dib-b() {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+// margin
+@mixin margin-a() {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// psevdo
+@mixin fc() {
+    &:first-child {
+        @content;
+    }
+}
+@mixin lc() {
+    &:last-child {
+        @content;
+    }
+}
+@mixin h() {
+    &:hover {
+        @content;
+    }
+}
+@mixin b() {
+    &:before {
+        @content;
+    }
+}
+@mixin a() {
+    &:after {
+        @content;
+    }
+}
+
+//flex
+@mixin flex-space-between () {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+// button
+
+@mixin btn() {
+    display: $btn-display;
+    border-width: $btn-bdw;
+    border-style: $btn-bds;
+    width: $btn-width;
+    height: $btn-height;
+    text-align: center;
+    text-decoration: $btn-decor;
+    border-radius: $btn-brad;
+    background-color: transparent;
+}
+
+// link
+@mixin link() {
+    font-family: $link-ff;
+    font-size: $link-fz;
+    line-height: $link-lh;
+    color: $link-color;
+    text-decoration: $link-decor;
+}
+@mixin link-h() {
+    &:active,
+        &:focus,
+        &:hover {
+        color: $color-0;
+    }
+}
+@mixin link-vis() {
+    &:visited {
+        color: $link-color-vis;
+        text-decoration: $link-decor-act;
+    }
+}
+
+
+// media-queries
+// p {
+//   @include xs {
+//     font-size: 18px;
+//   }
+// }
+
+// media max
+@mixin max-xs {
+    @media (max-width: #{$xs-width - 1px}) {
+        @content;
+    }
+}
+@mixin max-sm {
+    @media (max-width: #{$sm-width - 1px}) {
+        @content;
+    }
+}
+@mixin max-md {
+    @media (max-width: #{$md-width - 1px}) {
+        @content;
+    }
+}
+@mixin max-lg {
+    @media (max-width: #{$lg-width - 1px}) {
+        @content;
+    }
+}
+@mixin max-xlg {
+    @media (max-width: #{$xlg-width - 1px}) {
+        @content;
+    }
+}
+
+// media min
+@mixin xs {
+    @media (min-width: #{$xs-width}) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (min-width: #{$sm-width}) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: #{$md-width}) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: #{$lg-width}) {
+        @content;
+    }
+}
+@mixin slg {
+    @media (min-width: #{$slg-width}) {
+        @content;
+    }
+}
+@mixin xlg {
+    @media (min-width: #{$xlg-width}) {
+        @content;
+    }
+}
+
+// media min and max
+@mixin media-xs-sm {
+    @media (min-width: #{$xs-width}) and (max-width: #{$sm-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-xs-md {
+    @media (min-width: #{$xs-width}) and (max-width: #{$md-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-xs-lg {
+    @media (min-width: #{$xs-width}) and (max-width: #{$lg-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-xs-xlg {
+    @media (min-width: #{$xs-width}) and (max-width: #{$xlg-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-sm-md {
+    @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-sm-lg {
+    @media (min-width: #{$sm-width}) and (max-width: #{$lg-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-sm-xlg {
+    @media (min-width: #{$sm-width}) and (max-width: #{$xlg-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-md-lg {
+    @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-md-xlg {
+    @media (min-width: #{$md-width}) and (max-width: #{$xlg-width - 1px}) {
+        @content;
+    }
+}
+@mixin media-lg-xlg {
+    @media (min-width: #{$lg-width}) and (max-width: #{$xlg-width - 1px}) {
+        @content;
+    }
+}
+
+// media custom prop
+// p {
+//   @include media-min-max (600, 900) {
+//     font-size: 18px;
+//   }
+// }
+
+@mixin media-min ($media-min) {
+    @media (min-width: #{$media-min}px) {
+        @content;
+    }
+}
+@mixin media-max ($media-max) {
+    @media (max-width: #{$media-max - 1}px) {
+        @content;
+    }
+}
+@mixin media-min-max ($media-min, $media-max) {
+    @media (min-width: #{$media-min}px) and (max-width: #{$media-max - 1}px) {
+        @content;
+    }
+}
+
+// truncate
+@mixin text-truncate() {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+// resp
+@mixin img-resp() {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+@mixin table-responsive() {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+// aspect ratio
+
+// clearfix
+@mixin clearfix() {
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+// sr-only
+@mixin sr-only() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+// placeholders
+//textarea {
+//    @include input-placeholder {
+//        color: $grey;
+//    }
+//}
+@mixin placeholder-color {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+@mixin placeholder-focus {
+    &.placeholder { @content; }
+    &:focus::-webkit-input-placeholder { @content; }
+    &:focus::-moz-placeholder { @content; }
+    &:focus:-moz-placeholder { @content; }
+}

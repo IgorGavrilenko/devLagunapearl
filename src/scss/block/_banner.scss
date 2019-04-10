@@ -1,0 +1,220 @@
+/*banner-descrp*/
+.banner-descrp {
+    @include v-dtc-m();
+    @include max-xs {
+        padding-right: 6.7%;
+    }
+    &--center {
+        text-align: center;
+    }
+    &--right {
+        text-align: right;
+    }
+    &--c-w {
+        color: $white;
+    }
+    &__wrap {
+        position: relative;
+        display: inline-block;
+    }
+    &__title {
+        font-size: 32px;
+    }
+    &__text {
+        letter-spacing: $letterSpacing14;
+        @include lc() {
+            margin-bottom: 0;
+        }
+    }
+    &__button {
+        padding: 13px 50px;
+    }
+}
+
+/* banner */
+.banner {
+    overflow: hidden;
+    position: relative;
+    &__inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: $z-1000;
+        height: 50%;
+        display: table;
+        margin: auto;
+        width: 100%;
+        &--right {
+            left: auto;
+            @include sm {
+                right: -20%;
+            }
+        }
+        &--b-left {
+            top: auto;
+            right: auto;
+            height: auto;
+        }
+        &--static {
+            @include max-xs {
+                position: static;
+                color: $black;
+            }
+        }
+    }
+    &__img-wrap {
+        &--right{
+            text-align: center;
+            .banner__img {
+                top: 0;
+                left: 0;
+                position: absolute;
+                @include xs {
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &__img {
+        display: block;
+        @include max-sm {
+            width: 100%;
+        }
+    }
+    &--c-0 {
+        background-color: $color-0;
+    }
+    &--c-1 {
+        background-color: $color-1;
+    }
+    &--c-17 {
+        background-color: $color-17;
+    }
+    &--text {
+        @include max-md {
+            padding: 0;
+            height: auto;
+        }
+        @include md {
+            position: relative;
+            height: 0;
+            padding-bottom: 100%;
+        }
+        .banner__inner {
+            @include max-md {
+                position: static;
+            }
+        }
+    }
+    &--text-low {
+        @include md {
+            padding-bottom: 25%;
+        }
+    }
+    &--text-medium {
+        @include md {
+            padding-bottom: 50%;
+        }
+    }
+    &--text-high {
+        @include md {
+            padding-bottom: 70%;
+        }
+    }
+    &--text-full {
+        @include md {
+            padding-bottom: 100%;
+        }
+    }
+    &--main {
+        .banner-descrp {
+            text-align: center;
+            @include max-sm {
+                display: block;
+            }
+            &__wrap {
+                max-width: 100%;
+            }
+            &__title {
+                font-size: 38px;
+                letter-spacing: $letterSpacing13;
+            }
+            &__text {
+                margin-bottom: 30px;
+                max-width: 100%;
+            }
+            &__button {
+                border-width: 1px;
+                margin-bottom: 30px;
+            }
+            &__link {
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .banner__inner {
+            @include max-sm {
+                position: static;
+                display: block;
+                background-color: #ebe1e0;
+                padding: 40px;
+                transform: none;
+                text-align: center;
+            }
+        }
+    }
+    &--wide {
+        @include max-xs {
+        }
+        .banner-descrp {
+            @include max-xs {
+                padding: 40px;
+                text-align: left;
+                color: $black;
+            }
+            &__text {
+                @include xs {
+                    @include margin-a()
+                }
+            }
+            &__button {
+                @include max-xs {
+                    color: $black;
+                    border-color: $black;
+                }
+            }
+        }
+    }
+    &--top {
+        @include max-sm {
+            padding-top: 20px;
+        }
+        .banner-descrp {
+            position: relative;
+            padding: 0 15px;
+            @include xs {
+                padding: 0;
+            }
+            &__title {
+                font-size: 35px;
+                line-height: 1.33;
+                @include xs {
+                    font-size: 43px;
+                    letter-spacing: 1.7px;
+                }
+                text-transform: uppercase;
+            }
+            &__text {
+                max-width: 100%;
+                line-height: 1.56;
+            }
+        }
+    }
+}

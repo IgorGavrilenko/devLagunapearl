@@ -1,0 +1,30 @@
+/* rating */
+.rating {
+    height: 30px;
+    [class^="icon-star"],
+    &__result,
+    &__ui {
+        @include v-dib-m()
+    }
+    [class^="icon-star"] {
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0 3px;
+        text-decoration: none;
+        color: $starrrColor;
+        outline: none !important;
+        @include sm {
+            font-size: 18px;
+        }
+        @include lc() {
+            padding-right: 0;
+        }
+    }
+    &__result {
+        margin-left: 5px;
+        font-size: 24px;
+        @include sm {
+            font-size: 18px;
+        }
+    }
+}

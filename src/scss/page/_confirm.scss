@@ -1,0 +1,65 @@
+/* confirm */
+.confirm {
+    max-width: 570px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    .button {
+        &--check {
+            max-width:  400px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
+.confirm-title {
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    @include sm {
+        font-size: 24px;
+    }
+    &__text {
+        display: block;
+        margin-bottom: 25px;
+    }
+    &__icon {
+        font-size: 28px;
+        display: block;
+        margin: auto;
+        width: 49px;
+        height: 49px;
+        line-height: 49px;
+        color: $white;
+        background-color: $color-0;
+        border-radius: 50%;
+    }
+}
+.confirm-text {
+    margin-bottom: 45px;
+    &__item {
+        font-size: 18px;
+        @include sm {
+            font-size: 16px;
+        }
+        @include lc() {
+            margin-bottom: 0;
+        }
+    }
+    &__color {
+        color: $brownish;
+    }
+}
+.share {
+    &__title {
+        font-size: 26px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        @include sm {
+            font-size: 22px;
+        }
+    }
+    .net-bar {
+        margin-bottom: 40px;
+    }
+}

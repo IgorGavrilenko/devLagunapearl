@@ -1,0 +1,300 @@
+/* slicknav */
+.slicknav_menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1060;
+    background-color: $white;
+    @include sm {
+        display: none;
+    }
+    .sub-menu {
+        position: static;
+        display: block;
+        margin-bottom: 3.5%;
+    }
+    .slicknav_icon,
+    .slicknav_icon-bar {
+        display: none;
+    }
+}
+.slicknav_btn {
+    display: none;
+}
+.slicknav_nav {
+    position: relative;
+    top: 0;
+    z-index: $z-1060;
+    background: $white;
+    max-height: 700px;
+    overflow-y: auto;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    .header-menu__link {
+        padding: 0;
+    }
+    & > .header-menu__item {
+        padding: 0 5%;
+        & > a {
+            position: relative;
+            font-size: 22px;
+            line-height: 1.15;
+            padding: 15px 0;
+            border-top: 1px solid $gray;
+            text-align: center;
+            text-decoration: none !important;
+        }
+        &:first-child {
+            & > a {
+                border: none;
+            }
+        }
+    }
+    .slicknav_arrow {
+        font-size: 22px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        display: block;
+        &:before {
+            @extend %icomoon;
+        }
+    }
+}
+.slicknav_collapsed {
+    .slicknav_arrow {
+        &:before {
+            content: '\e90e'
+        }
+    }
+}
+.slicknav_open {
+    .slicknav_arrow {
+        &:before {
+            content: '\e911'
+        }
+    }
+}
+
+/* mob-menu-button */
+.mob-menu-button {
+    position: relative;
+    text-decoration: none !important;
+    &:after {
+        border-color: rgba(255, 255, 255, 0) !important;
+        border-bottom-color: $white !important;
+        border-width: 10px !important;
+        margin-left: -10px;
+    }
+
+    &:before {
+        border-color: rgba(205, 205, 205, 0) !important;
+        border-bottom-color: $gray !important;
+        border-width: 11px !important;
+        margin-left: -11px;
+    }
+
+    &:after,
+        &:before {
+        bottom: -11px;
+        left: 17px;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        z-index: 1070;
+        background-color: transparent;
+        @include xs {
+            left: 54%;
+        }
+    }
+}
+.icon-m-menu {
+    @extend %transition;
+    font-size: 40px;
+}
+.mob-menu-button--active {
+    .icon-m-menu {
+        left: 5.5%;
+        @include b() {
+            content: '\e912';
+        }
+    }
+}
+.mob-menu-open {
+    overflow: hidden;
+    .mob-menu-button:before,
+        .mob-menu-button:after {
+        content: " ";
+    }
+}
+
+/* selectric */
+.selectric-wrapper {
+    .selectric-items li.highlighted {
+        background: $color-1;
+    }
+    .highlighted {
+        padding: 0 10px;
+    }
+    .selectric-items {
+        border-color: $color-3;
+        background-color:$white;
+        opacity: 0;
+        @extend %transition;
+        li {
+            background-color:$white;
+            text-align: left;
+            padding: 7px 15px;
+            font-size: 16px;
+            @include fc() {
+                border: none;
+            }
+            &:hover {
+                background: $color-1;
+            }
+        }
+    }
+    .selectric {
+        background-color: transparent;
+    }
+    .label {
+        font-size: 16px;
+        line-height: 38px;
+        margin: 0;
+        padding: 0 15px;
+        height: auto;
+    }
+    .button {
+        right: 10px;
+        left: auto;
+        bottom: 0;
+        margin: auto;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border: none;
+        @extend %transition;
+        @include b() {
+            @extend %icomoon;
+            content: "\e90e";
+            font-size: 16px;
+            color: $black;
+            line-height: 16px;
+        }
+        &:after {
+            display: none !important;
+        }
+    }
+    &.selectric-open {
+        .button {
+            @include b() {
+                content: '\e911';
+            }
+        }
+        .selectric-items {
+            border-color: $color-3;
+            background-color:$white;
+            opacity: 1;
+        }
+    }
+}
+
+/* carousel */
+.slick-dots {
+    display: block !important;
+    margin-top: 35px;
+    text-align: center;
+    li {
+        @include v-dib-m()
+        margin-left: 15px;
+        @include fc() {
+            margin-left: 0;
+        }
+    }
+    button {
+        @include v-dib-m();
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        border: 3px solid $warm-gray;
+        background-color: $white;
+        color: transparent;
+    }
+    .slick-active {
+        button {
+            background-color: $color-0;
+        }
+    }
+}
+.slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: $z-1000;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+    color: transparent;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+    &:before {
+        @extend %icomoon;
+        font-size: 32px;
+        color: $warm-gray;
+    }
+}
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+    opacity: 1;
+    color: $black;
+}
+.slick-prev {
+    &:before {
+        content: '\e90f';
+    }
+    left: 0;
+}
+.slick-next {
+    &:before {
+        content: '\e910';
+    }
+    right: 0;
+}
+
+/* sticky */
+.sticky {
+    position: fixed;
+    z-index: 101;
+}
+.stop {
+    position: relative;
+    z-index: 101;
+}
+
+/*stacktable*/
+.stacktable { width: 100%; }
+.st-head-row { padding-top: 1em; }
+.st-head-row.st-head-row-main { font-size: 1.5em; padding-top: 0; }
+.st-key { width: 49%; text-align: right; padding-right: 1%; }
+.st-val { width: 49%; padding-left: 1%; }
+
+
+
+/* RESPONSIVE EXAMPLE */
+
+.stacktable.large-only { display: table; }
+.stacktable.small-only { display: none; }
+
+@media (max-width: 800px) {
+    .stacktable.large-only { display: none; }
+    .stacktable.small-only { display: table; }
+}

@@ -1,0 +1,119 @@
+/*fill-panel-sect*/
+.fill-panel-list {
+    margin-right: -15px;
+    margin-left: -15px;
+    @extend %flex;
+    @include a() {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+        height: 1px;
+        background-color: $color-3;
+        @include xs {
+            left: 5%;
+            right: 5%;
+        }
+        @include slg {
+            left: 0;
+            right: 0;
+        }
+    }
+    @include xs {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    &__item {
+        @extend %flex-items-stretch;
+        margin-bottom: 40px;
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+        @include xs {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        &--w-50 {
+            @include xs {
+                width: 50%;
+            }
+            .fill-panel {
+                &__text {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}
+.fill-panel {
+    width: 100%;
+    &--c-4 {
+        background-color: $color-4;
+    }
+    &--c-22 {
+        background-color: $color-22;
+    }
+    &__item {
+    }
+    &__wrap {
+        text-align: center;
+        padding: 50px 15px 55px;
+    }
+    &__top {
+        margin-bottom: 10px;
+    }
+    &__left,
+    &__right {
+        @include sm {
+            @include v-dtc-m();
+        }
+    }
+    &__icon {
+    }
+    &__middle {
+        margin-bottom: 35px;
+    }
+    &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        margin-right: auto;
+        margin-left: auto;
+        @include sm {
+            font-size: 18px;
+        }
+    }
+    &__sub-title {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+    &__text {
+        font-size: 18px;
+        letter-spacing: $letterSpacing14;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 560px;
+        @include sm {
+            font-size: 14px;
+        }
+        @include lc() {
+            margin-bottom: 0;
+        }
+    }
+}
+.fill-panel-text {
+    & > span {
+        display: block;
+    }
+    &__small {
+        font-size: 12px;
+    }
+    &__up {
+        text-transform: uppercase;
+    }
+}

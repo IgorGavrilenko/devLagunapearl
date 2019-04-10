@@ -1,0 +1,49 @@
+/* lead-sect */
+.lead-sect {
+    margin-bottom: 35px;
+    background-color: $white;
+    &__top,
+    &__middle,
+    &__bottom {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 920px;
+        text-align: center;
+    }
+    &__top {
+        margin-bottom: 30px;
+    }
+    &__icon {
+        background-color: $color-1;
+    }
+    &__title {
+        font-size: 26px;
+        @include xs {
+            font-size: 32px;
+        }
+        @include sm {
+            font-size: 43px;
+        }
+        line-height: 1.33;
+        letter-spacing: 1.7px;
+        color: $warm-gray;
+        margin-bottom: 30px;
+    }
+    &__phone {
+        margin-right: 5px;
+        display: none;
+    }
+    &__text {
+        line-height: 1.31;
+        letter-spacing: 1.6px;
+        @include lc() {
+            color: $black;
+            margin-bottom: 0;
+        }
+        span {
+            @include xs {
+                @include v-dib-m();
+            }
+        }
+    }
+}
